@@ -2,9 +2,9 @@
 
 
 #SYSTEM
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt autoremove -y
+#sudo apt update -y
+#sudo apt upgrade -y
+#sudo apt autoremove -y
 echo -e "\e[44m_____Updated_____\e[0m"
 
 sudo apt install wget
@@ -36,16 +36,14 @@ echo -e "\e[44m_____End Zoom_____\e[0m"
 
 
 #WALLPAPER
-sudo wget  -P /home/ https://github.com/redhcp/post-install/archive/main.zip
-cd /home/
-sudo unzip main.zip -d /home/
 cd post-install-main/
-cp edrans-desktop-dark.png /home/
+cp edrans-desktop.png /home/
 gsettings set org.gnome.desktop.background picture-uri "file:///home/edrans-desktop.png"
 cd /home/
 sudo rm -f -r post-install*
 sudo rm -f *main.zip
 #
 
-sudo apt update -y
+#sudo apt update -y
+sudo apt autoremove -y
 exit
