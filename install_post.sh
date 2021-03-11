@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #SYSTEM
 #sudo apt update -y
 #sudo apt upgrade -y
@@ -34,16 +33,14 @@ sudo dpkg -i zoom*.deb
 sudo rm -f zoom*.deb
 echo -e "\e[44m_____End Zoom_____\e[0m"
 
-
 #WALLPAPER
-cd post-install-main/
-cp edrans-desktop.png /home/
-gsettings set org.gnome.desktop.background picture-uri "file:///home/edrans-desktop.png"
+cd /home/post-install-main/
+cp edr-desktop.png /home/
+gsettings set org.gnome.desktop.background picture-uri "file:///home/edr-desktop.png"
 cd /home/
 sudo rm -f -r post-install*
 sudo rm -f *main.zip
-#
+
 
 #sudo apt update -y
-sudo apt autoremove -y
 exit
