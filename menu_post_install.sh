@@ -51,7 +51,6 @@ function all() {
     wallpaper
     update_system
     echo -e "\e[44m_____End ALL\e[0m"
-	
 }
 
 
