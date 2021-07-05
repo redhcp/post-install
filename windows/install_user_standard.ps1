@@ -8,3 +8,4 @@ choco install -y --force googlechrome slack zoom adobereader firefox winrar vlc 
 
 #choco install dellcommandupdate  #for DELL laptops
 
+
