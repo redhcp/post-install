@@ -4,6 +4,3 @@ reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Tilewallpaper /t REG_SZ /d 
 
 FOR /L %i IN (1,1,50) DO (RUNDLL32.EXE user32.dll, UpdatePerUserSystemParameters)
 
-
-# C:\Users\CYL\Downloads\Telegram Desktop
-
