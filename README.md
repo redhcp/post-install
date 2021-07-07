@@ -23,6 +23,7 @@ Contain(user standard):
 * vlc
 * google-drive-file-stream
 * libreoffice-fresh
+* Change desktop wallpaper
 
 
 you can add more apps [HERE](https://community.chocolatey.org/packages).
