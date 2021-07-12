@@ -13,7 +13,7 @@ Contain:
 
 ## Post Install Win10
 
-Contain(user standard):
+Contain(user std):
 * googlechrome
 * slack
 * zoom
@@ -24,6 +24,7 @@ Contain(user standard):
 * google-drive-file-stream
 * libreoffice-fresh
 * Change desktop wallpaper
+* Check or unistall updates
 
 
 you can add more apps [HERE](https://community.chocolatey.org/packages).
