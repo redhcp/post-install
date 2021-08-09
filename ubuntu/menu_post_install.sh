@@ -72,36 +72,44 @@ function all() {
     update_system
     echo -e "\e[44m_____End ALL\e[0m"
 }
+function all_standard() {
+    app_chrome
+    app_slack
+    app_zoom
+    update_system
+    echo -e "\e[44m_____End ALL\e[0m"
+}
 
 
 menu(){
 echo -ne "
 **OPTIONS**
-4) Update_system
-5) __ALL__
-1) Install Chrome
-2) Install Slack
+2) --ALL Standard--
 3) Install Zoom 
+4) Update_system
+5) Install Chrome
 6) wallpaper
 7) Install Libreoffice
-8) Install Docker
+8) Install Slack
 9) Install Git
+10) Install Docker
 
-
+1) --ALL--
 0) Exit
 
 Choose an option:"
         read a
         case $a in
-	        1) app_chrome ; menu ;;
-	        2) app_slack ; menu ;;
+	        1) all ; menu ;;
+            2) all_standard ; menu ;;
 	        3) app_zoom ; menu ;;
 	        4) update_system ; menu ;;
-	        5) all ; menu ;;
+	        5) app_chrome ; menu ;;
             6) wallpaper ; menu ;;
             7) app_libreoffice ; menu ;;
-            8) app_docker ; menu ;;
+	        8) app_slack ; menu ;;
             9) app_git ; menu ;;
+            10) app_docker ; menu ;;
 
 
 		0) exit 0 ;;
