@@ -30,6 +30,16 @@ function app_zoom() {
     sudo rm -f zoom*.deb
     echo -e "\e[44m_____End Zoom_____\e[0m"
 }
+function app_libreoffice() {
+    sudo apt install -y libreoffice     
+    sudo apt autoremove -y  && sudo apt clean
+    echo -e "\e[44m_____End LibreOffice_____\e[0m"
+}
+function app_git() {
+    sudo add-apt-repository -y ppa:git-core/ppa 
+    sudo apt update; sudo apt install -y git
+    echo -e "\e[44m_____End Git_____\e[0m"
+}
 
 function wallpaper(){
     cd /home/post-install-main/
@@ -38,6 +48,14 @@ function wallpaper(){
     cd /home/
     sudo rm -f -r post-install*
     sudo rm -f *main.zip
+}
+function app_docker() {
+    sudo apt install -y curl
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sudo sh get-docker.sh
+    sudo usermod -aG docker $USER
+    echo -e "\e[44m_____End Docker_____\e[0m"
+    docker --version
 }
 
 function update_system() {
@@ -48,7 +66,9 @@ function all() {
     app_chrome
     app_slack
     app_zoom
-    wallpaper
+    app_libreoffice
+    app_docker
+    app_git
     update_system
     echo -e "\e[44m_____End ALL\e[0m"
 }
@@ -57,12 +77,16 @@ function all() {
 menu(){
 echo -ne "
 **OPTIONS**
+4) Update_system
+5) __ALL__
 1) Install Chrome
 2) Install Slack
 3) Install Zoom 
-4) Update_system
-5) __ALL__
 6) wallpaper
+7) Install Libreoffice
+8) Install Docker
+9) Install Git
+
 
 0) Exit
 
@@ -75,6 +99,11 @@ Choose an option:"
 	        4) update_system ; menu ;;
 	        5) all ; menu ;;
             6) wallpaper ; menu ;;
+            7) app_libreoffice ; menu ;;
+            8) app_docker ; menu ;;
+            9) app_git ; menu ;;
+
+
 		0) exit 0 ;;
 		*) echo -e $red"Wrong option."$clear; WrongCommand;;
         esac
