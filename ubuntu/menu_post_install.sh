@@ -40,9 +40,8 @@ function app_git() {
     sudo apt update; sudo apt install -y git
     echo -e "\e[44m_____End Git_____\e[0m"
 }
-
 function wallpaper(){
-    cd /home/post-install-main/
+    cd $USER/Download/post-install-main/
     cp edr-desktop.png /home/
     gsettings set org.gnome.desktop.background picture-uri "file:///home/edr-desktop.png"
     cd /home/
@@ -54,8 +53,14 @@ function app_docker() {
     curl -fsSL https://get.docker.com -o get-docker.sh
     sudo sh get-docker.sh
     sudo usermod -aG docker $USER
-    echo -e "\e[44m_____End Docker_____\e[0m"
     docker --version
+    echo -e "\e[44m_____End Docker_____\e[0m"
+}
+function antvrs() {
+    sudo apt install -y clamav
+    sudo freshclam
+    sudo apt install -y clamtk 
+    echo -e "\e[44m_____End ClamAv_____\e[0m"
 }
 
 function update_system() {
@@ -76,6 +81,7 @@ function all_standard() {
     app_chrome
     app_slack
     app_zoom
+    antvrs
     update_system
     echo -e "\e[44m_____End ALL\e[0m"
 }
