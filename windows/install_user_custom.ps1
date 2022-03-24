@@ -1,8 +1,9 @@
 
-Set-Executionpolicy unrestricted -Force; #add permission execute powershell 
 
-Set-ExecutionPolicy Bypass -Scope Process -Force; `
-  iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+#if you have error related policy run:
+#Set-Executionpolicy unrestricted -Force; #add permission execute powershell 
+
 
 choco upgrade chocolatey #upgrade choco
 
