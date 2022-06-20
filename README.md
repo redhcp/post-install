@@ -11,7 +11,7 @@ Contain:
 
 
 
-## Post Install Win10
+## Post Install Windows
 
 Contain(user std):
 * googlechrome
@@ -25,6 +25,7 @@ Contain(user std):
 * libreoffice-fresh
 * Change desktop wallpaper
 * Check or unistall updates
+* Others
 
 
 you can add more apps [HERE](https://community.chocolatey.org/packages).

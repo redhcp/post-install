@@ -6,39 +6,55 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 
 
 choco upgrade chocolatey #upgrade choco
-
+# -------------
 #install apps
-choco install adobereader
-choco install googlechrome
-choco install firefox
-choco install winrar
-choco install zoom
-choco install k-litecodecpackfull
-choco install sublimetext3.app
+# -------------
+choco install -y googlechrome
+choco install -y chromium
+choco install -y 7zip.install
+choco install -y vlc
+choco install -y zoom
+choco install -y discord
+choco install -y notion
+choco install -y slack
+choco install -y k-litecodecpackfull
+choco install -y sublimetext3.app
+# choco install -y winrar 
+# choco install -y firefox
 
-
-choco install vscode
-choco install git.install
-choco install microsoft-windows-terminal
-choco install putty.install
-choco install virtualbox
-choco install docker-desktop
-choco install grafana
-# choco install vnc-viewer
-choco install github-desktop
-
-choco install notion
-choco install slack
-choco install resilio-sync-home
-choco install discord
-# choco install itunes
-
-# choco install windows10-media-creation-tool
-
+choco install -y vscode
+choco install -y git.install
+# choco install -y adobereader
+# choco install -y microsoft-windows-terminal
+# choco install -y putty.install
+# choco install -y virtualbox
+# choco install -y docker-desktop
+# choco install -y grafana
+# choco install -y vnc-viewer
+# choco install -y github-desktop
+# choco install -y resilio-sync-home
+# choco install -y anydesk.install
+# choco install -y notepadplusplus.install
+# choco install -y sumatrapdf
+# choco install -y obs-studio
+# choco install -y dotnetfx
+# choco install -y dotnet4.7
+# choco install -y dotnet4.7.1
+# choco install -y dotnet4.6
+# choco install -y dotnet4.6.2
+# choco install -y dotnet4.6.1
+# choco install -y dotnet4.5
+# choco install -y dotnet4.0
+# choco install -y dotnet3.5
+# choco install -y itunes
+# choco install -y windows10-media-creation-tool
+# choco install -y dellcommandupdate
 
 choco list --local-only  # view list installed apps
 
-
 #Others cmd:
-
 #cup -y all #Upgrade applications with Chocolatey
+
+
+
+
