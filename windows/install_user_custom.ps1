@@ -1,5 +1,5 @@
 
-
+#install choco
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 #if you have error related policy run:
 #Set-Executionpolicy unrestricted -Force; #add permission execute powershell 
@@ -9,6 +9,10 @@ choco upgrade chocolatey #upgrade choco
 # -------------
 #install apps
 # -------------
+
+choco install -y powershell-core
+choco install -y terminal-icons.powershell
+
 choco install -y googlechrome
 choco install -y chromium
 choco install -y 7zip.install
@@ -24,10 +28,14 @@ choco install -y sublimetext3.app
 
 choco install -y vscode
 choco install -y git.install
+choco install -y MobaXTerm 23.2.0
+choco install -y awscli
+
 # choco install -y adobereader
 # choco install -y microsoft-windows-terminal
 # choco install -y putty.install
 # choco install -y virtualbox
+# choco install -y virtualbox-guest-additions-guest.install 7.0.12
 # choco install -y docker-desktop
 # choco install -y grafana
 # choco install -y vnc-viewer
